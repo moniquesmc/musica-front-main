@@ -1,0 +1,20 @@
+<div class="music-item">
+    <div class="music-item-content">
+
+        <div class="form-check text-center">
+            <input class="form-check-input" type="checkbox" id="favoritar-{{music.id}}"
+            [(ngModel)]="music.favorito"
+            (change)="onCompletedCheckChange(music)">
+            <label class="form-check-label" for="favoritar-{{music.id}}"></label>
+        </div>
+
+        <div class="music-info">
+            <div [innerHTML]="music.nomeMusica" class="music-item-nomeMusica"
+                [ngClass]="music.favorito ? 'music-favorite' : ''"></div>
+            <div class="button-container">
+                <button type="button" [routerLink]="['/edit', music.id]" class="btn btn-success">Alterar</button>
+                <button type="button" class="btn btn-danger" (click)="delete(music)">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

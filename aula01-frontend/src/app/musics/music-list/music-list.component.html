@@ -1,0 +1,20 @@
+<h2 class="title">Listagem Música</h2>
+<hr class="line">
+<div class="button-layout" style="margin-top: 10px;">
+  <button type="button" [routerLink]="['/new']" class="btn btn-success">+</button>
+  <p>Adicionar Música</p>
+</div>
+
+
+
+    <ul class="list-group">
+      <li *ngFor="let music of musics" class="list-group-item">
+        <app-music-list-item [music]="music"></app-music-list-item>
+      </li>
+ 
+  <div *ngIf="musics.length == 0" class="alert alert-warning" role="alert">
+    Nenhuma Música foi cadastrada
+  </div>
+
+</ul>
+

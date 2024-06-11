@@ -1,0 +1,59 @@
+.music-item-content {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-grow: 4;
+}
+
+.form-check-input[type="checkbox"] {
+    display: none;
+}
+
+.form-check-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.form-check-label:before {
+    content: '\2606';
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: #FE5E85;
+}
+
+.form-check-input[type="checkbox"]:checked + .form-check-label:before {
+    content: '\2605';
+    color: #F4DC08;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.button-container {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-left: 10px;
+    justify-content: right;
+}
+
+.button-container button {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.text-center{
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.btn-success:hover, .btn-danger:hover {
+  background-color: #FE5E85;
+  color: white;
+}

@@ -1,0 +1,34 @@
+<h2>{{title}}</h2>
+
+<hr />
+
+<section id="form">
+    <form (ngSubmit)="OnSubmit()" #formMusic="ngForm" class="form-container">
+        <div class="form-group">
+            <label for="name-music">Nome da música</label>
+            <textarea [(ngModel)]="music.nomeMusica" name="name-music" id="name-music" class="form-control" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="artist-name">Nome do cantor/banda</label>
+            <input [(ngModel)]="music.nomeBanda" name="artist-name" id="artist-name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="album-name">Nome do Álbum</label>
+            <input [(ngModel)]="music.nomeAlbum" name="album-name" id="album-name" type="text" class="form-control">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="release-date">Data de lançamento</label>
+                <input [(ngModel)]="music.dataLancamento" name="release-date" id="release-date" type="date" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="duration">Duração</label>
+                <input [(ngModel)]="music.duracao" name="duration" id="duration" type="time" class="form-control">
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-confirm mr-2">Salvar</button>
+            <button type="button" [routerLink]="['']" class="btn btn-cancel">Cancelar</button>
+        </div>
+    </form>
+</section>
